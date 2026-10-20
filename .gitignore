@@ -1,0 +1,22 @@
+# Tools and system files
+.claude/
+CLAUDE.md
+prompts/
+*.local
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+node_modules/
+
+# Original PDFs in the project root stay local. Only the copies in assets/projects/ are published.
+/*.pdf
+
+# Original full-size photo (the site uses the compressed assets/profile.jpg and profile.webp)
+/profile pic.jpg
+
+# Notes and prompt files
+/PORTFOLIO_SPEC.md
+/PROJECTS_UPDATE.md
+/QUICK_BRIEF_PROMPT.md
+*_PROMPT.md

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maor Gerafi | Product Portfolio</title>
+    <meta name="description" content="Technology Management graduate, Product Management honors program, Bar-Ilan University. Projects, experience and a 30 second intro.">
+    <meta name="theme-color" content="#FDFBF7">
+
+    <!-- Link preview (LinkedIn / WhatsApp / Slack) -->
+    <!-- Replace after GitHub Pages is live: REPLACE_WITH_FINAL_URL in og:image, og:url and twitter:image -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Maor Gerafi | Product Portfolio">
+    <meta property="og:description" content="Technology Management graduate, Product Management honors program, Bar-Ilan University. Projects, experience and a 30 second intro.">
+    <meta property="og:image" content="https://REPLACE_WITH_FINAL_URL/assets/og-image.jpg">
+    <meta property="og:url" content="https://REPLACE_WITH_FINAL_URL/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maor Gerafi | Product Portfolio">
+    <meta name="twitter:description" content="Technology Management graduate, Product Management honors program, Bar-Ilan University.">
+    <meta name="twitter:image" content="https://REPLACE_WITH_FINAL_URL/assets/og-image.jpg">
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Plus Jakarta Sans (headings) + Inter (body); Rubik + Assistant cover Hebrew text automatically -->
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-inner">
+            <!-- Logo = back-to-top button: on hover "MG." slides up and an arrow slides in -->
+            <a href="#top" class="logo-btn" aria-label="Back to top" title="Back to top">
+                <span class="logo-face">MG<span class="logo-dot">.</span></span>
+                <span class="logo-face logo-up" aria-hidden="true">↑</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Main">
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+            </nav>
+
+            <div class="nav-right">
+                <button class="btn btn-primary" data-open-modal>Contact Me <span class="arrow" aria-hidden="true">→</span></button>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+        <div class="hero-grid">
+            <div class="hero-text reveal">
+                <h1><span class="hero-greet">Hey, I'm</span> <span class="hero-name">Maor<br>Gerafi</span></h1>
+                <p class="hero-lead">
+                    Product-minded and driven by understanding user behavior, solving real problems,
+                    and creating business value end-to-end.
+                </p>
+                <p class="hero-sub">
+                    Technology Management graduate, Product Management honors program, <span class="nowrap">Bar-Ilan University</span>.
+                </p>
+                <!-- Extra line shown only when ?track=xxx is in the URL (see script.js) -->
+                <p class="hero-sub" data-show-track="pm" hidden>I work on discovery, specs and data to define what gets built.</p>
+                <p class="hero-sub" data-show-track="prj" hidden>I plan, prioritize and track work so projects ship on time.</p>
+                <p class="hero-sub" data-show-track="ops" hidden>I build clear processes and use data to make operations run better.</p>
+                <p class="hero-sub" data-show-track="bd" hidden>I research markets and competitors to find where the opportunities are.</p>
+                <p class="hero-sub" data-show-track="cs" hidden>I help users get value from the product and solve their problems fast.</p>
+
+                <div class="hero-actions">
+                    <button class="btn btn-secondary" id="briefOpen" aria-haspopup="dialog" aria-controls="briefModal">
+                        <span class="brief-play" aria-hidden="true"></span>Quick Brief<span class="badge">30 sec</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-image reveal">
+                <div class="portrait">
+                    <div class="portrait-fallback" aria-hidden="true">MG</div>
+                    <!-- WebP for modern browsers, JPEG fallback for the rest -->
+                    <picture>
+                        <source srcset="assets/profile.webp" type="image/webp">
+                        <img src="assets/profile.jpg" alt="Maor Gerafi presenting the Blink product practicum poster" width="1200" height="1600" fetchpriority="high" onerror="this.remove()">
+                    </picture>
+                </div>
+                <p class="portrait-caption"><span class="caption-dot" aria-hidden="true"></span>Presenting my Blink product practicum</p>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="container">
+
+        <!-- Experience -->
+        <!-- Each bullet has data-tracks="track:M|S". script.js shows M bullets, moves S bullets
+             into "Read more" and hides untagged ones for the track in the URL. -->
+        <section id="experience" class="section">
+            <div class="section-head reveal">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-intro">Product, customer success and project roles, plus five years leading people in the IDF.</p>
+            </div>
+
+            <div class="exp-list">
+                <article class="exp-card reveal" data-exp>
+                    <div class="exp-summary">
+                        <span class="exp-date">Jun 2026 – Present</span>
+                        <h3 class="exp-role">Product Management Practicum</h3>
+                        <div class="exp-org"><span class="exp-company">Blink</span><span class="tag">FinTech</span></div>
+                    </div>
+                    <div class="exp-details">
+                        <ul class="bullet-list exp-main">
+                            <li data-tracks="pm:M prj:S bd:S">Leading discovery for a new feature under PM mentorship, from market research and competitor mapping to scoping.</li>
+                            <li data-tracks="pm:M ops:S bd:S">Analyzed market and product data to build clear use cases for the feature definition.</li>
+                        </ul>
+                        <div class="details" id="more-blink-pm"><ul class="bullet-list exp-more"></ul></div>
+                        <button class="toggle-btn" aria-expanded="false" aria-controls="more-blink-pm" hidden>Read more</button>
+                    </div>
+                </article>
+
+                <article class="exp-card reveal" data-exp>
+                    <div class="exp-summary">
+                        <span class="exp-date">Aug 2025 – Present</span>
+                        <h3 class="exp-role">Customer Success Specialist</h3>
+                        <div class="exp-org"><span class="exp-company">Blink</span><span class="tag">FinTech</span></div>
+                    </div>
+                    <div class="exp-details">
+                        <ul class="bullet-list exp-main">
+                            <li data-tracks="pm:S ops:M cs:M">Investigate platform issues using user data, resolve them independently or escalate prioritized cases to the technical teams.</li>
+                            <li data-tracks="prj:S ops:S cs:M">Onboarded and trained 3+ new team members.</li>
+                        </ul>
+                        <div class="details" id="more-blink-cs"><ul class="bullet-list exp-more"></ul></div>
+                        <button class="toggle-btn" aria-expanded="false" aria-controls="more-blink-cs" hidden>Read more</button>
+                    </div>
+                </article>
+
+                <article class="exp-card reveal" data-exp>
+                    <div class="exp-summary">
+                        <span class="exp-date">Feb 2025 – Jul 2025</span>
+                        <h3 class="exp-role">Project Management Intern</h3>
+                        <div class="exp-org"><span class="exp-company">Sports ManifesTech</span><span class="tag">Sports-tech</span></div>
+                    </div>
+                    <div class="exp-details">
+                        <ul class="bullet-list exp-main">
+                            <li data-tracks="pm:S prj:M ops:S">Managed day-to-day task priorities, set timelines and tracked status.</li>
+                            <li data-tracks="pm:M prj:M">Wrote a full PRD for a web platform connecting athletes with professional coaches through 1:1 sessions.</li>
+                            <li data-tracks="pm:M bd:M">Ran competitive benchmarking, user profiling and feasibility research to shape product strategy.</li>
+                        </ul>
+                        <div class="details" id="more-sports"><ul class="bullet-list exp-more"></ul></div>
+                        <button class="toggle-btn" aria-expanded="false" aria-controls="more-sports" hidden>Read more</button>
+                    </div>
+                </article>
+
+                <article class="exp-card reveal" data-exp>
+                    <div class="exp-summary">
+                        <span class="exp-date">Nov 2016 – Jan 2022</span>
+                        <h3 class="exp-role">Company Commander</h3>
+                        <div class="exp-org"><span class="exp-company">IDF</span><span class="tag">Military service</span></div>
+                    </div>
+                    <div class="exp-details">
+                        <ul class="bullet-list exp-main">
+                            <li data-tracks="prj:M ops:M cs:S">Commanded about 200 soldiers and commanders, managing schedules and resources under changing timelines.</li>
+                            <li data-tracks="prj:M ops:S cs:S">Led 12+ training programs across 3 different types.</li>
+                            <li data-tracks="prj:S ops:M">Set up weekly debriefs and fixed routines to improve how the team worked.</li>
+                            <li data-tracks="prj:M ops:S bd:S cs:S">Coordinated with internal departments and external partners to meet operational goals.</li>
+                        </ul>
+                        <div class="details" id="more-idf"><ul class="bullet-list exp-more"></ul></div>
+                        <button class="toggle-btn" aria-expanded="false" aria-controls="more-idf" hidden>Read more</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Education & Awards — shown in every track. data-emphasis="pm" moves an item to the top on ?track=pm -->
+        <section id="education" class="section">
+            <div class="section-head reveal">
+                <h2 class="section-title">Education &amp; Awards</h2>
+                <p class="section-intro">Academic background and recognition.</p>
+            </div>
+
+            <ol class="edu-grid">
+                <li class="edu-card reveal">
+                    <div class="edu-top"><span class="tag">Degree</span><span class="edu-year">2026</span></div>
+                    <h3>B.A. Technology Management</h3>
+                    <p class="edu-org">Bar-Ilan University</p>
+                    <p class="edu-note">Completed.</p>
+                </li>
+                <li class="edu-card reveal" data-emphasis="pm">
+                    <div class="edu-top"><span class="tag">Honors</span><span class="edu-year">2026</span></div>
+                    <h3>Product Management Honors Program</h3>
+                    <p class="edu-org">Bar-Ilan University</p>
+                    <p class="edu-note">Selective program, admission based on GPA. Included a hands-on product practicum.</p>
+                </li>
+                <li class="edu-card reveal">
+                    <div class="edu-top"><span class="tag">Award</span><span class="edu-year">2020</span></div>
+                    <h3>President's Excellence Award</h3>
+                    <p class="edu-org">IDF</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Projects -->
+        <!-- Three real projects + one "Coming soon" card. Cards without data-tracks show on every track.
+             All PDF and external links open in a new tab. -->
+        <section id="projects" class="section">
+            <div class="section-head reveal">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-intro">Things I've built and prototyped, with more on the way.</p>
+            </div>
+
+            <!-- Marquee: the cards slide slowly and endlessly to the left (pure CSS animation).
+                 script.js appends one copy of the 4 cards (aria-hidden + inert) so the loop has no seam. -->
+            <div class="carousel" id="projCarousel" role="region" aria-label="Projects">
+                <div class="carousel-track projects-grid" id="projTrack">
+                <article class="project">
+                    <a class="project-preview" href="assets/projects/TrekBoard_presentation.pdf" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/projects/previews/trekboard.jpg" alt="TrekBoard presentation title slide: Your Entire Trip, One Board" width="1600" height="900" loading="lazy">
+                    </a>
+                    <div class="project-body">
+                        <div class="project-meta"><span class="tag">Product prototype · Base44</span></div>
+                        <h3>TrekBoard</h3>
+                        <p>A travel product prototype built as a vibe-coding assignment. The problem: trip recommendations and plans are scattered across chats and notes. TrekBoard keeps everything in one place, makes it easy to share with friends, and lets a group manage the trip end to end, with collaborative trips, instead of juggling extra WhatsApp groups.</p>
+                        <p class="project-note">Prototype only, not a production product.</p>
+                        <div class="project-links">
+                            <a class="btn btn-secondary btn-sm" href="https://trek-board-0ebfc16f.base44.app" target="_blank" rel="noopener noreferrer">Open live prototype <span class="arrow" aria-hidden="true">↗</span></a>
+                            <a class="btn btn-secondary btn-sm" href="assets/projects/TrekBoard_presentation.pdf" target="_blank" rel="noopener noreferrer">View presentation <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <a class="project-preview" href="assets/projects/NewPetOwners_market_research.pdf" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/projects/previews/newpet.jpg" alt="Title slide of the New Pet Ownership market research presentation" width="1600" height="900" loading="lazy">
+                    </a>
+                    <div class="project-body">
+                        <div class="project-meta"><span class="tag">Market research</span></div>
+                        <h3>Navigating New Pet Ownership</h3>
+                        <p>Market research on how new pet owners make care and training decisions, and what stops them from trusting digital information sources. Includes a survey, competitor mapping, user interviews and thematic coding, ending with the opportunity areas and a go-to-market direction.</p>
+                        <div class="project-links">
+                            <a class="btn btn-secondary btn-sm" href="assets/projects/NewPetOwners_market_research.pdf" target="_blank" rel="noopener noreferrer">View presentation <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <a class="project-preview preview-top" href="assets/projects/Blink_poster_web.pdf" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/projects/previews/blink-poster.jpg" alt="Top of the Blink practicum poster with the user insights section" width="1000" height="876" loading="lazy">
+                    </a>
+                    <div class="project-body">
+                        <div class="project-meta"><span class="tag">Product practicum · Blink</span></div>
+                        <h3>Opening the World of Investing to Everyone</h3>
+                        <p>The poster I presented at the end of my product management practicum at Blink. It summarizes the user insights that guided the work and the lessons I took from it.</p>
+                        <p class="project-note">The feature we worked on has not been released yet, so it is not detailed in the poster.</p>
+                        <div class="project-links">
+                            <a class="btn btn-secondary btn-sm" href="assets/projects/Blink_poster_web.pdf" target="_blank" rel="noopener noreferrer">View poster <span class="arrow" aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project project-placeholder">
+                    <div class="project-body">
+                        <div class="project-meta"><span class="tag">Coming soon</span></div>
+                        <h3>More projects on the way</h3>
+                        <p>A full product life cycle project is in development. Case studies and prototypes will be added here.</p>
+                    </div>
+                </article>
+                </div>
+            </div>
+            <div class="carousel-footer">
+                <button class="carousel-play" id="projAutoplay" type="button" aria-label="Pause automatic rotation" aria-controls="projTrack"></button>
+            </div>
+
+            <!-- ===== OLD PROJECT CARDS (archived, not shown) =====
+                 Kept for reference. To bring one back, move it above this comment, inside .projects-grid.
+
+
+                <article class="project project-featured reveal" data-tracks="pm:M prj:S ops:S bd:S cs:S">
+                    <div class="project-visual visual-dark">
+                        <img src="assets/projects/portfolio.png" alt="Screenshot of this portfolio site" onerror="this.remove()">
+                        <span aria-hidden="true">Portfolio</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta"><span class="tag">Web · AI-built</span><span class="project-year">2026</span></div>
+                        <h3>This portfolio site</h3>
+                        <p>Built with AI coding tools. Content is tagged by role track and filtered on the client side.</p>
+                        <div class="project-links">
+                            <span class="link-placeholder">GitHub — coming soon</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project reveal" data-tracks="pm:M">
+                    <div class="project-visual visual-soft" aria-hidden="true"><span>Prototypes</span></div>
+                    <div class="project-body">
+                        <div class="project-meta"><span class="tag">No-code · Lovable, Base44</span><span class="project-year">2025–2026</span></div>
+                        <h3>No-code prototypes</h3>
+                        <p>Prototypes and wireframes for mobile and web apps, built as part of product management coursework and a project management specialization.</p>
+                    </div>
+                </article>
+                <article class="project project-placeholder reveal">
+                    <div class="project-visual" aria-hidden="true"><span>Coming soon</span></div>
+                    <div class="project-body">
+                        <div class="project-meta"><span class="tag">Flagship project</span><span class="project-year">In development</span></div>
+                        <h3>Coming soon</h3>
+                        <p>A full product life-cycle initiative — details to be added once development is complete.</p>
+                    </div>
+                </article>
+                <article class="project project-placeholder reveal">
+                    <div class="project-visual" aria-hidden="true"><span>Coming soon</span></div>
+                    <div class="project-body">
+                        <div class="project-meta"><span class="tag">Flagship project</span><span class="project-year">In development</span></div>
+                        <h3>Coming soon</h3>
+                        <p>A full product life-cycle initiative — details to be added once development is complete.</p>
+                    </div>
+                </article>
+                <article class="project project-placeholder reveal">
+                    <div class="project-visual" aria-hidden="true"><span>Coming soon</span></div>
+                    <div class="project-body">
+                        <div class="project-meta"><span class="tag">Flagship project</span><span class="project-year">In development</span></div>
+                        <h3>Coming soon</h3>
+                        <p>A full product life-cycle initiative — details to be added once development is complete.</p>
+                    </div>
+                </article>
+            ===== END OLD PROJECT CARDS ===== -->
+        </section>
+
+        <!-- Skills -->
+        <!-- Nothing is hidden here. With ?track=xxx, that track's M skills move to the top of each
+             category and are highlighted. Skills without data-tracks keep their place. -->
+        <section id="skills" class="section">
+            <div class="section-head reveal">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-intro">Methods, tools and languages I work with.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-group reveal">
+                    <h3>Methodologies</h3>
+                    <ul class="skill-list">
+                        <li data-tracks="pm:M prj:S">Discovery, PRD and spec writing</li>
+                        <li data-tracks="pm:M bd:M">Market and competitor research</li>
+                        <li data-tracks="pm:S prj:M ops:S">Task management, prioritization, timelines</li>
+                        <li data-tracks="prj:S ops:M">Process improvement</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Tools</h3>
+                    <ul class="skill-list">
+                        <li data-tracks="pm:S prj:S ops:M bd:M cs:S">Excel</li>
+                        <li>SQL (basic)</li>
+                        <li data-tracks="pm:M prj:S">Miro (wireframes, flows)</li>
+                        <li data-tracks="pm:S prj:M ops:S">Jira (basic), Trello, MS Project (basic)</li>
+                        <li data-tracks="pm:S">GitHub (basic)</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>AI Tools</h3>
+                    <ul class="skill-list">
+                        <li data-tracks="pm:M prj:M ops:M bd:M cs:M">Gemini, Claude, NotebookLM</li>
+                        <li data-tracks="pm:M">No-code prototyping: Lovable, Base44</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li data-tracks="ops:S cs:M">User onboarding and training</li>
+                        <li data-tracks="pm:S ops:M cs:M">Troubleshooting with user data</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Web Development</h3>
+                    <ul class="skill-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li data-tracks="pm:M prj:M ops:M bd:M cs:M">Hebrew (native), English (fluent)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Contact modal — opened by the navbar "Contact Me" button.
+         GitHub: replace YOUR-USERNAME once the profile is ready. -->
+    <div id="contactModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+        <div class="modal-card">
+            <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+            <h3 id="modalTitle">Get in touch</h3>
+            <p class="modal-sub">Reach out by email, LinkedIn or GitHub.</p>
+
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <a class="contact-link" href="mailto:maorgerafi18@gmail.com">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">maorgerafi18@gmail.com</span>
+                    </a>
+                    <button class="copy-btn" data-copy="maorgerafi18@gmail.com">Copy</button>
+                </li>
+                <li class="contact-item">
+                    <a class="contact-link" href="https://www.linkedin.com/in/maorgerafi" target="_blank" rel="noopener">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">linkedin.com/in/maorgerafi ↗</span>
+                    </a>
+                </li>
+                <li class="contact-item">
+                    <a class="contact-link" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/YOUR-USERNAME ↗</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Quick Brief — a 3-step intro opened from the hero button.
+         The text lives in QUICK_BRIEF at the top of script.js; this is only the empty shell. -->
+    <div id="briefModal" class="brief-overlay" hidden>
+        <div class="brief-card" role="dialog" aria-modal="true" aria-labelledby="briefTitle">
+            <div class="brief-top">
+                <div class="brief-progress" id="briefProgress" aria-hidden="true"></div>
+                <div class="brief-top-actions">
+                    <button class="brief-skip" data-brief-close>Skip</button>
+                    <button class="modal-close brief-close" data-brief-close aria-label="Close">&times;</button>
+                </div>
+            </div>
+
+            <h2 class="brief-title" id="briefTitle">Quick Brief <span class="brief-count" id="briefCount"></span></h2>
+            <div class="brief-stage" id="briefStage" aria-live="polite"></div>
+
+            <div class="brief-nav">
+                <button class="brief-back" id="briefBack" aria-label="Previous step">←</button>
+                <button class="btn brief-next" id="briefNext">Next <span class="arrow" aria-hidden="true">→</span></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© <span id="year">2026</span> Maor Gerafi</p>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
