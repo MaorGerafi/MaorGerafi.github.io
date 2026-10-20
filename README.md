@@ -2,7 +2,7 @@
 
 My personal portfolio website. Plain HTML, CSS and JavaScript, with no build step and no frameworks.
 
-**Live site:** https://REPLACE_WITH_FINAL_URL/
+**Live site:** https://maorgerafi.github.io/
 
 ## Open it locally
 
