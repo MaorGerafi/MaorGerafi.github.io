@@ -1,6 +1,6 @@
 # Maor Gerafi | Product Portfolio
 
-My personal portfolio website. Plain HTML, CSS and JavaScript, with no build step and no frameworks.
+My personal portfolio website. Plain HTML, CSS and JavaScript.
 
 **Live site:** https://maorgerafi.github.io/
 
